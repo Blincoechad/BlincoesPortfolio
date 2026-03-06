@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="logo">
+          <!-- my logo -->
+          <img
+            src="media/myLogo.png"
+            alt="PixelDesigns"
+            width="66"
+            height="46"
+          />
+          <span>PixelDesigns</span>
+        </a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="logic-programs.html" class="nav-link">Logic Programs</a>
+          <a href="web-projects.html" class="nav-link">Web Projects</a>
+          <a href="graphic-work.html" class="nav-link">Graphic Work</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <h1>Get In Touch</h1>
+          <p>Like my work? Let's talk.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two-col">
+          <!-- contact info -->
+          <div class="col">
+            <h2>Contact Info</h2>
+            <p>
+              I'm available for freelance work, collaborations, and full-time
+              opportunities.
+            </p>
+            <ul class="contact-list">
+              <li>
+                Email:
+                <a href="mailto:your@email.com">your@email.com</a>
+              </li>
+              <li>
+                Phone:
+                <a href="tel:+10000000000">(000) 000-0000</a>
+              </li>
+              <li>
+                GitHub:
+                <a
+                  href="https://github.com/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  github.com/yourusername
+                </a>
+              </li>
+              <li>
+                LinkedIn:
+                <a
+                  href="https://linkedin.com/in/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  linkedin.com/in/yourusername
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- contact form -->
+          <div class="col">
+            <form
+              id="contactForm"
+              class="contact-form"
+              novalidate
+              aria-label="Contact form"
+            >
+              <div
+                class="form-error"
+                id="formError"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></div>
+
+              <div class="form-group">
+                <label for="name">
+                  Full Name
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="name-error"
+                  placeholder="Jane Smith"
+                />
+                <span
+                  class="form-error"
+                  id="name-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  Email Address
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="email-error"
+                  placeholder="jane@example.com"
+                />
+                <span
+                  class="form-error"
+                  id="email-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="form-group">
+                <label for="project-type">Reason for Contacting</label>
+                <select id="project-type" name="project-type">
+                  <option value="">-- Select a type --</option>
+                  <option value="web">Job</option>
+                  <option value="graphic">Graphic Design</option>
+                  <option value="logic">Website Build</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">
+                  Message
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  aria-required="true"
+                  aria-describedby="message-error"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+                <span
+                  class="form-error"
+                  id="message-error"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <p class="form-note">
+                <span class="required">*</span>
+                Required fields
+              </p>
+
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+
+              <div
+                class="form-success"
+                id="formSuccess"
+                role="status"
+                aria-live="polite"
+                hidden
+              >
+                <p>&#10003; Message sent! I'll be in touch soon.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>&copy; 2025 Pixel Designs. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="web-projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

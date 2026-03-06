@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | About</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="logo">
+          <!-- my logo -->
+          <img
+            src="media/myLogo.png"
+            alt="PixelDesigns"
+            width="66"
+            height="46"
+          />
+          <span>PixelDesigns</span>
+        </a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link active">About</a>
+          <a href="logic-programs.html" class="nav-link">Logic Programs</a>
+          <a href="web-projects.html" class="nav-link">Web Projects</a>
+          <a href="graphic-work.html" class="nav-link">Graphic Work</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- page header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>About Me</h1>
+          <p>Developer. Designer. Problem Solver.</p>
+        </div>
+      </section>
+
+      <!-- bio section -->
+      <section class="section">
+        <div class="container two-col">
+          <div class="col">
+            <!-- Replace with your actual photos -->
+            <img src="media/about-photo1.jpg" alt="Photo " />
+            <img src="media/about-photo2.jpg" alt="Another photo" />
+            <img src="media/about-photo3.jpg" alt=" another photo " />
+          </div>
+          <div class="col">
+            <h2>Who I Am</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Obcaecati omnis exercitationem libero illum, nam doloremque.
+            </p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <a href="contact.html" class="btn btn-primary">Work With Me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS LIST (accessible styled list) -->
+      <section class="section alt-bg">
+        <div class="container">
+          <h2>My Skills</h2>
+          <ul class="skills-list" aria-label="List of technical skills">
+            <li>HTML5 &amp; CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Responsive Design</li>
+            <li>Google Analystics</li>
+            <li>Adobe PhotoShop</li>
+            <li>Figma / UI Design</li>
+            <li>Git &amp; Version Control</li>
+            <li>Accessibility (WCAG)</li>
+            <li>SEO Best Practices</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- education and experience table -->
+      <section class="section">
+        <div class="container">
+          <h2>Education &amp; Experience</h2>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="Education and experience"
+            tabindex="0"
+          >
+            <table>
+              <caption class="visually-hidden">
+                Education and work experience summary
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col">Role / Degree</th>
+                  <th scope="col">Institution / Company</th>
+                  <th scope="col">Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026–Present</td>
+                  <td>Web Design</td>
+                  <td>Freelance</td>
+                  <td>Work</td>
+                </tr>
+                <tr>
+                  <td>2024–2026</td>
+                  <td>Web Design C.C.C</td>
+                  <td>Hillsborough College</td>
+                  <td>Education</td>
+                </tr>
+                <tr>
+                  <td>2022–2024</td>
+                  <td>Online Courses</td>
+                  <td>FreeCodeCamp</td>
+                  <td>Education</td>
+                </tr>
+                <tr>
+                  <td>2022–2024</td>
+                  <td>Online Courses</td>
+                  <td>W3Schools</td>
+                  <td>Education</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- image slider for certification -->
+      <section class="section alt-bg">
+        <div class="container sliderHeading">
+          <h2>Certifications from Online Courses</h2>
+          <p class="sliderTitle">Preview of Certifications</p>
+          <div class="image-slider" aria-label="Certification image slideshow">
+            <button
+              class="slider-btn prev"
+              type="button"
+              aria-label="Previous slide"
+            >
+              ◀
+            </button>
+            <div class="slider-track">
+              <img
+                class="slide"
+                src="media/certifications/CanvaIntro.png"
+                alt="Certification 1"
+              />
+              <img
+                class="slide"
+                src="media/certifications/CanvaProjects.jpg"
+                alt="Certification 2"
+              />
+              <img
+                class="slide"
+                src="media/certifications/ExcelGraphs.png"
+                alt="Certification 3"
+              />
+              <img
+                class="slide"
+                src="media/certifications/FigmaComponents.png"
+                alt="Certification 4"
+              />
+              <img
+                class="slide"
+                src="media/certifications/FigmaIntoCode.png"
+                alt="Certification 5"
+              />
+              <img
+                class="slide"
+                src="media/certifications/JsAiPrograming.png"
+                alt="Certification 6"
+              />
+              <img
+                class="slide"
+                src="media/certifications/JsDebugging.png"
+                alt="Certification 7"
+              />
+              <img
+                class="slide"
+                src="media/certifications/JsWebForms.png"
+                alt="Certification 8"
+              />
+              <img
+                class="slide"
+                src="media/certifications/PythonMadeApp.png"
+                alt="Certification 9"
+              />
+              <img
+                class="slide"
+                src="media/certifications/SEO(SquareSpace).png"
+                alt="Certification 10"
+              />
+              <img
+                class="slide"
+                src="media/certifications/VideoCreationCanva.png"
+                alt="Certification 11"
+              />
+              <img
+                class="slide"
+                src="media/certifications/Webflow101.png"
+                alt="Certification 12"
+              />
+              <img
+                class="slide"
+                src="media/certifications/WebflowLayouts.png"
+                alt="Certification 13"
+              />
+              <img
+                class="slide"
+                src="media/certifications/WebFlowNoCode.png"
+                alt="Certification 14"
+              />
+            </div>
+
+            <button
+              class="slider-btn next"
+              type="button"
+              aria-label="Next slide"
+            >
+              ▶
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>&copy; 2025 Pixel Designs. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="web-projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
