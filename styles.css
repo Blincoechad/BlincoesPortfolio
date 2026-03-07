@@ -93,10 +93,11 @@ li {
   --gap: 1.5rem;
   --radius: 8px;
   --blue-mid: #4a7ba5;
+  --blue-mid-rgb: 74, 123, 165;
   --blue-light: #6fa3d6;
-  --off-white: #f5f7fa;
-  --dark: #2f3e46;
-  --pale-blue: #c6ddf0;
+  --off-white: #e9edf4;
+  --dark: #23303c;
+  --pale-blue: #b1c8df;
 }
 
 /* layout  */
@@ -292,7 +293,7 @@ li {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 4rem 1.25rem;
+  padding: 2.5rem 1.25rem 2rem;
   gap: 1rem;
   background-color: var(--off-white);
 }
@@ -339,19 +340,30 @@ li {
 
 /* card */
 .card {
-  background: #4a7ba5;
+  background: #fff;
+  color: var(--dark);
   border-radius: var(--radius);
+  border: 1px solid rgba(var(--blue-mid-rgb), 0.45);
   padding: 1.25rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 6px 18px rgba(var(--blue-mid-rgb), 0.12);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  min-height: 100%;
+}
+.card h3,
+.card p {
+  color: var(--dark);
 }
 .card img {
   border-radius: calc(var(--radius) - 2px);
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+.card > a.btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .split-image {
@@ -377,6 +389,9 @@ li {
 .card-btns {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
