@@ -125,7 +125,14 @@ li {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
+  flex-direction: row;
 }
+
+/* Flip order for alternating sections */
+.two-col.reverse {
+  flex-direction: row-reverse;
+}
+
 .two-col .col {
   flex: 1 1 280px;
 }
@@ -252,6 +259,7 @@ li {
 .btn {
   display: inline-block;
   padding: 0.65rem 1.5rem;
+  margin-top: 3rem;
   border-radius: var(--radius);
   font-weight: 700;
   font-size: 0.9rem;
@@ -705,7 +713,45 @@ tbody tr:hover {
   font-size: 0.85rem;
   color: rgba(245, 247, 250, 0.8);
 }
+/* details / summary collapsible sections */
+details.program-details {
+  border: 1px solid rgba(var(--blue-mid-rgb), 0.35);
+  border-radius: var(--radius);
+  background: rgba(var(--blue-mid-rgb), 0.08);
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+details.program-details summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-weight: 700;
+  padding: 0.4rem 0.55rem;
+  border-radius: calc(var(--radius) - 2px);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(var(--blue-mid-rgb), 0.25);
+}
 
+details.program-details summary::-webkit-details-marker {
+  display: none;
+}
+
+details.program-details summary::after {
+  content: "▶";
+  transition: transform 0.2s ease;
+}
+
+details.program-details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+details.program-details p {
+  margin: 0.75rem 0 0;
+  line-height: 1.5;
+}
 /*  mobile responsive  */
 @media (max-width: 640px) {
   /* show hamburger and hide nav */
@@ -734,6 +780,12 @@ tbody tr:hover {
   .nav-link {
     padding: 0.7rem 0.8rem;
     font-size: 1rem;
+  }
+
+  /* program cards: show image first on narrow screens */
+  .program-row,
+  .two-col.reverse {
+    flex-direction: column-reverse;
   }
 
   /* makes hero stack vertically */
