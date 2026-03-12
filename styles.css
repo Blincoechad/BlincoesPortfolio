@@ -120,7 +120,7 @@ li {
   text-align: center;
 }
 
-/* Two-column flex layout — stacks on mobile */
+/* two-column flex layout — stacks on mobile */
 .two-col {
   display: flex;
   flex-wrap: wrap;
@@ -128,7 +128,7 @@ li {
   flex-direction: row;
 }
 
-/* Flip order for alternating sections */
+/* flip order for alternating sections */
 .two-col.reverse {
   flex-direction: row-reverse;
 }
@@ -190,7 +190,7 @@ li {
   color: #f5f7fa;
 }
 
-/* Desktop nav links */
+/* desktop nav links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -219,7 +219,7 @@ li {
   color: #fff;
 }
 
-/* Hamburger — hidden on desktop */
+/* hamburger — hidden on desktop */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -255,10 +255,11 @@ li {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ── BUTTONS ────────────────────────────────────────────── */
+/* buttons */
 .btn {
   display: inline-block;
-  padding: 0.65rem 1.5rem;
+  padding: 0.65rem 1.6rem;
+  margin-right: 1.4rem;
   margin-top: 3rem;
   border-radius: var(--radius);
   font-weight: 700;
@@ -295,7 +296,7 @@ li {
   text-decoration: none;
 }
 
-/* ── HERO ───────────────────────────────────────────────── */
+/* hero */
 .hero {
   display: flex;
   flex-direction: column;
@@ -385,12 +386,6 @@ li {
   aspect-ratio: 8 / 5;
 }
 
-@media (max-width: 520px) {
-  .split-image {
-    grid-template-columns: 1fr;
-  }
-}
-
 .split-image__item img {
   width: 100%;
   height: 100%;
@@ -406,6 +401,10 @@ li {
 
   gap: 0.5rem;
   margin-top: 0.5rem;
+}
+.homeCards {
+  text-decoration: underline;
+  text-underline-offset: .85rem;
 }
 
 /* website redesign card */
