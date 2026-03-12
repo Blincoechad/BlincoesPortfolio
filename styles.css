@@ -7,7 +7,21 @@
      --pale-blue:  #C6DDF0
    ============================================================ */
 
-/* ── RESET ─────────────────────────────────────────────── */
+/* my varibles */
+:root {
+  --nav-h: 60px;
+  --max-w: 1100px;
+  --gap: 1.5rem;
+  --radius: 8px;
+  --blue-mid: #4a7ba5;
+  --blue-mid-rgb: 74, 123, 165;
+  --blue-light: #6fa3d6;
+  --off-white: #e9edf4;
+  --dark: #23303c;
+  --pale-blue: #b1c8df;
+}
+
+/* reset */
 *,
 *::before,
 *::after {
@@ -84,20 +98,6 @@ ol {
 }
 li {
   margin-bottom: 0.4rem;
-}
-
-/* my varibles */
-:root {
-  --nav-h: 60px;
-  --max-w: 1100px;
-  --gap: 1.5rem;
-  --radius: 8px;
-  --blue-mid: #4a7ba5;
-  --blue-mid-rgb: 74, 123, 165;
-  --blue-light: #6fa3d6;
-  --off-white: #e9edf4;
-  --dark: #23303c;
-  --pale-blue: #b1c8df;
 }
 
 /* layout  */
@@ -398,13 +398,10 @@ li {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: auto;
-
-  gap: 0.5rem;
-  margin-top: 0.5rem;
 }
 .homeCards {
   text-decoration: underline;
-  text-underline-offset: .85rem;
+  text-underline-offset: 0.85rem;
 }
 
 /* website redesign card */
@@ -712,6 +709,7 @@ tbody tr:hover {
   font-size: 0.85rem;
   color: rgba(245, 247, 250, 0.8);
 }
+
 /* details / summary collapsible sections */
 details.program-details {
   border: 1px solid rgba(var(--blue-mid-rgb), 0.35);
@@ -751,6 +749,7 @@ details.program-details p {
   margin: 0.75rem 0 0;
   line-height: 1.5;
 }
+
 /*  mobile responsive  */
 @media (max-width: 640px) {
   /* show hamburger and hide nav */
