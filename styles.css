@@ -571,7 +571,7 @@ tbody tr:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .gallery-title > p {
   text-decoration: underline;
@@ -615,7 +615,7 @@ tbody tr:hover {
   font-size: 15px;
   max-width: 12rem;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   top: 60px;
   z-index: 3001;
   padding: 0.5rem 0;
