@@ -609,6 +609,14 @@ tbody tr:hover {
   margin-top: 1rem;
   font-weight: bold;
   font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.bullet {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.2rem;
 }
 .clickToView {
   color: rgba(0, 0, 0, 0.838);
