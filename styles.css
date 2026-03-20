@@ -588,7 +588,6 @@ tbody tr:hover {
 /* makes images scale when hovered on*/
 .gallery-grid figure:hover {
   transform: scale(1.1);
-  
 }
 
 .gallery-grid img {
@@ -616,7 +615,7 @@ tbody tr:hover {
   max-width: 12rem;
   margin: 0 auto;
   margin-bottom: 2rem;
-  top: 60px; 
+  top: 60px;
   z-index: 3001;
   background-color: rgba(59, 98, 150, 0.087);
   padding: 0.5rem 0;
