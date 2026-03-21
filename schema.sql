@@ -6,3 +6,5 @@ create table contact_submissions (
   message text not null,
   created_at timestamp default now()
 );
+
+-- supabase code - check weekly to keep active
