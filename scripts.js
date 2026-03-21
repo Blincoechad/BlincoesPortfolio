@@ -1,5 +1,9 @@
 
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+const supabase = createClient(
+  'https://xxjjwbaovtbylknwgbzt.supabase.co',
+  'sb_publishable_ggiWZHIFBs_QdJy2bgPJGw_cP2dUoza'
+)
 'use strict';
 
 /*  hamburger menu  */
@@ -38,10 +42,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 /*  contact form validation + supabase  */
 
 
-const supabase = createClient(
-  'https://xxjjwbaovtbylknwgbzt.supabase.co',
-  'sb_publishable_ggiWZHIFBs_QdJy2bgPJGw_cP2dUoza'
-)
+
 
 (function () {
   let form    = document.getElementById('contactForm');
