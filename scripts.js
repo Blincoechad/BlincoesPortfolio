@@ -35,6 +35,14 @@
 
 
 /*  contact form validation  */
+/*  contact form validation + supabase  */
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+const supabase = createClient(
+  'https://xxjjwbaovtbylknwgbzt.supabase.co',
+  'sb_publishable_ggiWZHIFBs_QdJy2bgPJGw_cP2dUoza'
+)
+
 (function () {
   let form    = document.getElementById('contactForm');
   let success = document.getElementById('formSuccess');
@@ -77,43 +85,48 @@
     });
   });
 
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    var valid = true;
+    let valid = true;
 
-    if (error) {
-      error.hidden = true;
-      error.textContent = '';
-    }
-
+    if (error) { error.hidden = true; error.textContent = ''; }
     ['name', 'email', 'message'].forEach(clearError);
 
-    var name    = document.getElementById('name');
-    var email   = document.getElementById('email');
-    var message = document.getElementById('message');
+    let nameVal    = document.getElementById('name').value.trim();
+    let emailVal   = document.getElementById('email').value.trim();
+    let messageVal = document.getElementById('message').value.trim();
+    let projectType = document.getElementById('project-type').value;
 
-    if (!name || !name.value.trim())       { setError('name', 'Please enter your full name.'); valid = false; }
-    if (!email || !email.value.trim())     { setError('email', 'Please enter your email.'); valid = false; }
-    else if (!isValidEmail(email.value.trim())) { setError('email', 'Please enter a valid email.'); valid = false; }
-    if (!message || !message.value.trim()) { setError('message', 'Please enter a message.'); valid = false; }
+    if (!nameVal)                     { setError('name', 'Please enter your full name.'); valid = false; }
+    if (!emailVal)                    { setError('email', 'Please enter your email.'); valid = false; }
+    else if (!isValidEmail(emailVal)) { setError('email', 'Please enter a valid email.'); valid = false; }
+    if (!messageVal)                  { setError('message', 'Please enter a message.'); valid = false; }
 
     if (!valid) {
       if (error) {
         error.textContent = 'Please fill out the required fields marked with a red asterisk.';
         error.hidden = false;
-        error.focus();
       }
-      var firstErr = form.querySelector('.error');
-      if (firstErr) firstErr.focus();
       return;
     }
 
-    // succcess - add a success message
-    form.reset();
-    if (success) {
-      success.hidden = false;
-      success.focus();
-      setTimeout(function () { success.hidden = true; }, 6000);
+    // submit to supabase
+    const { error: sbError } = await supabase
+      .from('contact_submissions')
+      .insert([{ name: nameVal, email: emailVal, project_type: projectType, message: messageVal }])
+
+    if (sbError) {
+      if (error) {
+        error.textContent = 'Something went wrong. Please try again.';
+        error.hidden = false;
+      }
+    } else {
+      form.reset();
+      if (success) {
+        success.hidden = false;
+        success.focus();
+        setTimeout(function () { success.hidden = true; }, 6000);
+      }
     }
   });
 })();
@@ -353,3 +366,8 @@
     if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeLightbox();
   });
 })();
+
+
+// Supabase code for my contact form
+// Supabase setup
+// Supabase setup
