@@ -1,5 +1,5 @@
 
-
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 'use strict';
 
 /*  hamburger menu  */
@@ -36,7 +36,7 @@
 
 /*  contact form validation  */
 /*  contact form validation + supabase  */
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
 
 const supabase = createClient(
   'https://xxjjwbaovtbylknwgbzt.supabase.co',
