@@ -115,7 +115,7 @@ const supabase = createClient(
 
     if (sbError) {
       if (error) {
-        error.textContent = 'Something went wrong. Please try again.';
+        error.textContent = 'You have reached the message limit for the day Please try again in 24 hours, Thanks!';
         error.hidden = false;
       }
     } else {
