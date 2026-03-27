@@ -65,8 +65,8 @@ if (contactForm) {
 
   // show error on blur if field is empty
   // var nameField = document.getElementById('name');
-  // var emailField = document.getElementById('email');
-  // var messageField = document.getElementById('message');
+  var emailField = document.getElementById('email');
+  var messageField = document.getElementById('message');
 
   // nameField.addEventListener('blur', function () {
   //   if (!nameField.value.trim()) {
@@ -193,9 +193,6 @@ for (var s = 0; s < sliders.length; s++) {
   var nextBtn = slider.querySelector('.slider-btn.next');
 
   if (!track || !slides.length) continue;
-
-  var currentIndex = 0;
-  var autoPlayTimer = null;
 
   // I used a function to create scoped event listeners for each slider
   function setupSlider(track, slides, prevBtn, nextBtn, slider) {
@@ -360,6 +357,7 @@ if (galleryImages.length > 0) {
     document.body.style.overflow = '';
     largeImage.src = '';
     largeVideo.pause();
+     // starts the video with sound
     largeVideo.muted = true;
     largeVideo.src = '';
     splitImageA.src = '';
