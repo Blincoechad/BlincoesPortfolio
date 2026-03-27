@@ -192,7 +192,7 @@ for (var s = 0; s < sliders.length; s++) {
   var prevBtn = slider.querySelector('.slider-btn.prev');
   var nextBtn = slider.querySelector('.slider-btn.next');
 
-  if (!track || !slides.length || !prevBtn || !nextBtn) continue;
+  if (!track || !slides.length) continue;
 
   var currentIndex = 0;
   var autoPlayTimer = null;
@@ -227,19 +227,23 @@ for (var s = 0; s < sliders.length; s++) {
         timer = null;
       }
     }
-      // the next two blocks of code are event listeners added onto 
-      // the buttons and listens for a click then moves either forward or backwards
-    prevBtn.addEventListener('click', function () {
-      index = (index - 1 + slides.length) % slides.length;
-      update();
-      startAutoPlay();
-    });
 
-    nextBtn.addEventListener('click', function () {
-      index = (index + 1) % slides.length;
-      update();
-      startAutoPlay();
-    });
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        index = (index - 1 + slides.length) % slides.length;
+        update();
+        startAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        index = (index + 1) % slides.length;
+        update();
+        startAutoPlay();
+      });
+    }
+
       // this code causes the images to stop/contine when mouse moves on top
       // of them then when it moves away
     slider.addEventListener('mouseenter', stopAutoPlay);
