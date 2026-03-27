@@ -1,4 +1,6 @@
-'use strict';
+import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@latest/dist/index.mjs';
+
+injectSpeedInsights();
 
 //  the mobile hamburger menu 
 
