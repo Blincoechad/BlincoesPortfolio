@@ -285,6 +285,9 @@ li {
   color: #fff;
   border-color: var(--blue-mid);
 }
+.before-btn {
+}
+
 .btn-primary:hover,
 .btn-primary:focus-visible {
   background-color: var(--pale-blue);
@@ -427,6 +430,15 @@ li {
   gap: 0.5rem;
   margin-top: auto;
 }
+.redesign-preview .card-btns,
+.github-btn-row {
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+.preview-btns .btn,
+.github-btn-row .btn {
+  margin-top: 0;
+}
 .homeCards {
   text-decoration: underline;
   text-underline-offset: 0.85rem;
@@ -443,6 +455,40 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   margin-top: 0.5rem;
+}
+
+/* Ensure before/after preview blocks have enough height for buttons on mobile */
+.redesign-preview {
+  min-height: 320px;
+  padding: 1rem;
+}
+
+.redesign-preview .card-btns {
+  margin-top: auto;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .split-image {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+  }
+
+  .redesign-preview {
+    min-height: 380px;
+    padding: 1.2rem;
+  }
+
+  .redesign-preview img {
+    aspect-ratio: 16/9;
+    max-height: 220px;
+  }
+
+  .card-btns .btn {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .redesign-preview {
@@ -968,7 +1014,8 @@ details.program-details p {
     padding: 0.7rem 0.8rem;
     font-size: 1rem;
   }
-
+/* keeps before and after buttons from being pushed
+off screen when in mobile view */
   /* program cards: show image first on narrow screens */
   .program-row,
   .two-col.reverse {
